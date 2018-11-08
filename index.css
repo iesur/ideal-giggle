@@ -1,0 +1,149 @@
+html { 
+background: #dedede; 
+text-transform: uppercase; 
+color: #000; 
+font-size: 16px; 
+line-height: 23px; 
+} 
+
+body { 
+display: flex; 
+flex-direction: column; 
+min-width: 768px; 
+max-width: 1200px; 
+margin: 0 auto; 
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+background: #fff; 
+font-family: "PT Sans", "Helvetica", "Arial", sans-serif; 
+} 
+
+body * { 
+outline: 1px dashed #81b3d2; 
+} 
+
+body *:hover { 
+outline: 2px dashed #008090; 
+} 
+
+a { 
+text-decoration: none; 
+color: #000; 
+} 
+
+img { 
+display: block; 
+} 
+
+.header { 
+padding: 15px 6%; 
+columns: 40% 2; 
+font-weight: bold; 
+} 
+
+.header a { 
+display: table-cell; 
+} 
+
+.image1 { 
+opacity: 0; 
+position: absolute; 
+top: 0; 
+left: 0; 
+right: 0; 
+margin: auto; 
+width: 140px; 
+z-index: 1; 
+} 
+
+.section { 
+position: relative; 
+overflow: hidden; 
+text-align: center; 
+} 
+
+.section:after { 
+position: absolute; 
+bottom: 0; 
+z-index: 1; 
+left: 0; 
+right: 0; 
+content: ""; 
+height: 0; 
+animation: grow-mask 0.5s linear; 
+-webkit-animation-fill-mode: forwards; 
+animation-fill-mode: forwards; 
+background-color: white; 
+-webkit-clip-path: polygon(0% 100%, 0% 0%, 20% 40%, 20% 0%, 50% 100%, 80% 0%, 80% 40%, 100% 0%, 100% 100%); 
+clip-path: polygon(0% 100%, 0% 0%, 20% 40%, 20% 0%, 50% 100%, 80% 0%, 80% 40%, 100% 0%, 100% 100%); 
+} 
+
+.section .background { 
+position: absolute; 
+bottom: 0; 
+right: 0; 
+left: 0; 
+} 
+
+.section .img-text { 
+position: relative; 
+z-index: 1; 
+margin: 80px; 
+} 
+
+.feature-cards { 
+display: flex; 
+flex-flow: row wrap; 
+} 
+
+.feature-cards .feature { 
+flex: 1 1 33.33%; 
+padding: 50px; 
+box-sizing: border-box; 
+text-align: center; 
+} 
+
+.feature-cards .attraction-feature { 
+background-color: #81b3d2; 
+} 
+
+.feature-cards .imaged-feature { 
+flex: 2 2 66.67%; 
+padding: 0; 
+overflow: hidden; 
+} 
+
+.feature-cards .imaged-feature img { 
+display: block; 
+width: 100%; 
+height: auto; 
+object-position: 50% 50%; 
+object-fit: none; 
+} 
+
+.hotel-reserve form { 
+display: none; 
+} 
+
+footer { 
+display: flex; 
+align-items: center; 
+justify-content: space-around; 
+width: 100%; 
+padding: 30px 0; 
+opacity: 0.7; 
+background: #fff; 
+} 
+
+footer .column { 
+display: flex; 
+align-items: center; 
+} 
+
+@keyframes grow-mask { 
+0% { 
+height: 0; 
+} 
+
+100% { 
+height: 50px; 
+} 
